@@ -1,0 +1,136 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/yellowAccent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">@color/jet</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/darkPrimary</item>
+        <item name="colorPrimaryDark">@color/darkPrimaryDark</item>
+        <item name="colorAccent">@color/darkAccent</item>
+        <item name="android:background">@color/darkPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="elevation">4dp</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AlertDialogCustom" parent="AppThemeLight">
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- Light EditTexts -->
+    <style name="ThemeOverlay.FirebaseIcon" parent="AppThemeLight">
+        <item name="android:layout_marginTop">@dimen/icon_top_margin</item>
+        <item name="android:layout_marginBottom">@dimen/icon_bottom_margin</item>
+    </style>
+
+    <style name="AppTheme.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!--Text Styles-->
+    <style name="ThemeOverlay.TextDetail" parent="AppThemeLight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ThemeOverlay.TitleText" parent="AppThemeLight">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="AppTheme.TextItem" parent="AppThemeLight">
+        <item name="android:textColor">@color/jet</item>
+        <item name="colorAccent">@color/colorAccentSecond</item>
+        <item name="colorControlActivated">@color/colorAccentSecond</item>
+    </style>
+
+    <style name="AppTheme.ProgressBar" parent="AppThemeLight">
+        <item name="android:textColor">@color/jet</item>
+        <item name="colorAccent">@color/colorActiveSwitch</item>
+    </style>
+
+    <style name="BaseTimerFab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.TitleText" parent="AppThemeLight">
+        <item name="android:padding">@dimen/margin_normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/jet</item>
+    </style>
+
+    <style name="AppTheme.SubTitleText" parent="AppThemeLight">
+        <item name="android:layout_marginTop">@dimen/margin_large</item>
+        <item name="android:layout_marginEnd">@dimen/margin_large</item>
+        <item name="android:layout_marginBottom">@dimen/margin_large</item>
+        <item name="android:layout_marginStart">@dimen/margin_tab</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/monsoon</item>
+    </style>
+
+    <style name="TimePickerTimeText" parent="AppThemeLight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+        <item name="android:layout_marginStart">@dimen/margin_medium</item>
+        <item name="android:textSize">@dimen/time_picker_textSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TimePickerDescText" parent="AppThemeLight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+        <item name="android:textSize">@dimen/desc_picker_textSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="TimePickerButtons" parent="AppThemeLight">
+        <item name="android:paddingTop">@dimen/button_picker_paddingTop</item>
+        <item name="android:paddingBottom">@dimen/button_picker_paddingBottom</item>
+        <item name="android:paddingStart">@dimen/button_picker_paddingStart</item>
+        <item name="android:paddingEnd">@dimen/button_picker_paddingEnd</item>
+        <item name="android:textSize">@dimen/button_picker_textSize</item>
+        <item name="android:textColor">@color/monsoon</item>
+    </style>
+</resources>

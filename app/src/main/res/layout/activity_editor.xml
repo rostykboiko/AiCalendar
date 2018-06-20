@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_editor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:theme="@style/AppTheme.NoActionBar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/margin_large"
+                android:text="@string/saveBtn"
+                android:textSize="@dimen/text_size_standard"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/title_activity_editor"
+                android:inputType="textMultiLine"
+                android:maxLength="126"
+                android:paddingEnd="88dp"
+                android:paddingStart="@dimen/margin_tab"
+                android:paddingTop="@dimen/margin_medium"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/desc_backBtn"
+                android:padding="16dp"
+                android:src="@drawable/ic_arrow_left" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/options_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            app:theme="@style/AppTheme.TextItem"
+            card_view:cardElevation="@dimen/card_elevation">
+
+            <RelativeLayout
+                android:id="@+id/rv_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!--Date-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_material_clock"
+                    />
+                <TextView
+                    android:id="@+id/txtHoleDayOption"
+                    android:text="@string/hole_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="@dimen/item_name_padding"
+                    android:paddingEnd="@dimen/item_name_end"
+                    android:paddingStart="@dimen/item_name_start" />
+                <Switch
+                    android:id="@+id/hole_day_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/txtHoleDayOption"
+                    android:layout_alignEnd="@+id/txtTimeStart" />
+
+                <TextView
+                    android:id="@+id/txtDateStart"
+                    android:text="@string/dateEventStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="@dimen/item_name_padding"
+                    android:paddingEnd="@dimen/item_name_end"
+                    android:paddingStart="@dimen/item_name_start"
+                    android:layout_below="@+id/txtHoleDayOption"/>
+
+                <TextView
+                    android:id="@+id/txtDateEnd"
+                    android:text="@string/dateEventEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:padding="@dimen/item_name_padding"
+                    android:paddingEnd="@dimen/item_name_end"
+                    android:paddingStart="@dimen/item_name_start"
+                    android:layout_below="@+id/txtDateStart"
+                    />
+
+                <!--Time-->
+                <TextView
+                    android:id="@+id/txtTimeStart"
+                    android:text="@string/timeEventStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+
+                    android:layout_alignBaseline="@+id/txtDateStart"
+                    android:layout_alignBottom="@+id/txtDateStart"
+                    />
+
+                <TextView
+                    android:id="@+id/txtTimeEnd"
+                    android:text="@string/timeEventEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="16sp"
+
+                    android:layout_alignBaseline="@+id/txtDateEnd"
+                    android:layout_alignBottom="@+id/txtDateEnd" />
+
+                <!--Divider-->
+                <View
+                    android:layout_width="match_parent"
+                    android:id="@+id/action_divider"
+                    android:layout_height="0.5dp"
+                    android:background="@color/iron"
+                    android:layout_below="@+id/txtDateEnd"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="16dp" />
+
+                <!--Options-->
+                <ImageView
+                    android:id="@+id/ic_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+
+                    android:src="@drawable/ic_material_message"
+                    android:layout_below="@+id/action_divider"
+                    />
+
+                <EditText
+                    android:id="@+id/txtDescription"
+                    android:layout_width="200dp"
+                    android:layout_marginStart="72dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoCorrect|textMultiLine"
+                    android:maxLength="150"
+                    android:hint="@string/description"
+                    android:textColor="?android:attr/textColor"
+                    android:background="@android:color/transparent"
+                    android:layout_below="@+id/action_divider"
+                    />
+                <RelativeLayout
+                    android:id="@+id/rv_add_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pref_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/options_card_view"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_medium"
+            card_view:cardElevation="@dimen/card_elevation">
+
+            <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="8dp"
+                app:theme="@style/AppTheme.TextItem">
+
+                <RelativeLayout
+                    android:id="@+id/duration_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/item_rl_row">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/item_icon_padding"
+                        android:src="@drawable/ic_material_clock" />
+
+                    <TextView
+                        android:id="@+id/tv_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/item_name_padding"
+                        android:paddingEnd="@dimen/item_name_end"
+                        android:paddingStart="@dimen/item_name_start"
+                        android:text="@string/tv_duration"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_duration_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:padding="@dimen/margin_large"
+                        android:paddingEnd="@dimen/item_duration_time"
+                        android:paddingStart="@dimen/item_duration_time" />
+                </RelativeLayout>
+                <!--Divider-->
+                <View
+                    android:layout_width="match_parent"
+                    android:id="@+id/action_divider1"
+                    android:layout_height="0.5dp"
+                    android:background="@color/iron"
+                    android:layout_below="@+id/duration_row"
+                    android:layout_alignParentStart="true" />
+
+                <RelativeLayout
+                    android:id="@+id/participants_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/duration_row"
+                    android:layout_margin="@dimen/item_rl_row">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/item_icon_padding"
+                        android:src="@drawable/ic_material_account" />
+
+                    <TextView
+                        android:id="@+id/Tv_participants"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/item_name_padding"
+                        android:paddingEnd="@dimen/item_name_end"
+                        android:paddingStart="@dimen/item_name_start"
+                        android:text="@string/tv_participants"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true">
+
+                        <ImageView
+                            android:id="@+id/participants_icon3"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginTop="16dp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/participants_icon2"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginTop="16dp"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/participants_icon1"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="16dp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/participants_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_standard"
+                            android:padding="16dp"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="16dp"
+                            android:text=""/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

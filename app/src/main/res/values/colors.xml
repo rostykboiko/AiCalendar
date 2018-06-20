@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AppTheme light -->
+    <color name="colorPrimary">#F8CE46</color>
+    <color name="colorPrimaryDark">#F8CE46</color>
+    <color name="colorPrimaryLight">#BBDEFB</color>
+    <color name="cardColor">#BBDEFB</color>
+    <color name="colorAccent">#f44336</color>
+    <color name="colorAccentSecond">#2196F3</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorDivider">#DCDCDC</color>
+    <color name="colorActiveSwitch">#2196f3</color>
+
+    <!-- AppTheme Yellow -->
+    <color name="yellowPrimary">#F8CE46</color>
+    <color name="yellowPrimaryDark">#F8CE46</color>
+    <color name="yellowPrimaryLight">#BBDEFB</color>
+    <color name="cardYellowColor">#BBDEFB</color>
+    <color name="yellowAccent">#f44336</color>
+    <color name="yellowAccentSecond">#2196F3</color>
+    <color name="yellowPrimaryText">#212121</color>
+    <color name="yellowSecondaryText">#727272</color>
+    <color name="yellowDivider">#DCDCDC</color>
+    <color name="yellowActiveSwitch">#2196f3</color>
+
+    <!-- AppTheme Dark -->
+    <color name="darkPrimary">#21242b</color>
+    <color name="darkPrimaryDark">#21242b</color>
+    <color name="darkPrimaryLight">#BBDEFB</color>
+    <color name="cardDarkColor">#BBDEFB</color>
+    <color name="darkBackground">#363a43</color>
+    <color name="darkAccent">#40567d</color>
+    <color name="darkAccentSecond">#40567d</color>
+    <color name="darkPrimaryText">#212121</color>
+    <color name="darkSecondaryText">#727272</color>
+    <color name="darkDivider">#DCDCDC</color>
+    <color name="darkActiveSwitch">#40567d</color>
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#727272</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="titan">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="base">#DDDDDD</color>
+    <color name="white">#FFFFFF</color>
+    <color name="whiteBasic">#FFFFFF</color>
+
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+
+
+</resources>
